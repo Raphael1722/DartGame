@@ -107,16 +107,16 @@ public class PlayerScreen{
                 System.out.println("Diese Daten, haben nicht den korrekten Datentyp");
             }
 
-            //Spieler wird mit den Daten erstellt
-            Player spieler = new Player(getNewName(), getNewAge(), getNewUsername(),0, 100);
+                    //Spieler wird mit den Daten erstellt
+                    Player spieler = new Player(getNewName(), getNewAge(), getNewUsername(),0, 100);
 
-            //Clear Textfield
-            oneTxt.setText("");
-            twoTxt.setText("");
-            threeTxt.setText("");
+                    //Clear Textfield
+                    oneTxt.setText("");
+                    twoTxt.setText("");
+                    threeTxt.setText("");
         });
         back.setOnAction(event ->{
-
+            new AllyPally(stage);
         });
 
 

@@ -13,7 +13,7 @@ import static javafx.application.Application.launch;
 
 public class AllyPally {
 
-    public AllyPally(){
+    public AllyPally(Stage stage){
         //Grundriss erstellen
         BorderPane screen = new BorderPane();
         Scene main = new Scene(screen, 500, 500);
@@ -21,6 +21,23 @@ public class AllyPally {
         GridPane gridBottom = new GridPane();
         ChoiceBox mode = new ChoiceBox();
         ChoiceBox difficulty = new ChoiceBox();
+
+        screen.setTop(gridTop);
+        screen.setBottom(gridBottom);
+
+        gridTop.add(mode,0,0);
+        gridBottom.add(difficulty,0,0);
+
+        mode.getItems().addAll("501","301");
+        difficulty.getItems().addAll("Einfach","Mittel", "Schwierig");
+
+
+
+
+        //Stage bennenen und zeigen
+        stage.setTitle("Darts Menue");
+        stage.setScene(main);
+        stage.show();
     }
 
 }

@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36fd3e54-c913-48ea-bdb7-4385ce34d957" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/PlayerScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/createPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/dartgame/Stylesheet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/dartgame/StylesheetPlayerScreen.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/AllyPally.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/AllyPally.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Menue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Menue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/PlayerScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/PlayerScreen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,12 +104,23 @@
       <workItem from="1705066160184" duration="3003000" />
       <workItem from="1705476093727" duration="23659000" />
       <workItem from="1705504109773" duration="636000" />
-      <workItem from="1705558174491" duration="19080000" />
+      <workItem from="1705558174491" duration="20517000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

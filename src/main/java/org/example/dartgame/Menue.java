@@ -70,9 +70,14 @@ public class Menue extends Application {
         //Titel einbinden in grid
         top.add(title, 1,0);
 
-        //player-button click -> andere screen zeigen
+        //player-button click -> andere screen zu Spieler erstellen
         player.setOnAction(event ->{
             new PlayerScreen(primaryStage);
+        });
+
+        //Dartspielen-button click -> andere Screen zu Ally Pally
+        dart.setOnAction(event ->{
+            new AllyPally(primaryStage);
         });
 
         //Stylesheet einbinden
@@ -88,13 +93,4 @@ public class Menue extends Application {
     public static void main(String[] args) {
         launch();
     }
-
-
-
-
-
-
-
-
-
 }
