@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rubik+Doodle+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Kanit&display=swap');
+.top {
+    -fx-background-image: url("https://as1.ftcdn.net/v2/jpg/05/75/44/74/1000_F_575447417_yrINkTCNKGi3fEptuSYvDEDFaYhAMe3s.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 1300, 800;
+    -fx-background-position: center center;
+}
+.button{
+    -fx-background-color: #efefef;
+    -fx-font-family: Kanit;
+    -fx-font-size: 30;
+}
+.title {
+    -fx-font-family: "Rubik Doodle Shadow";
+    -fx-text-fill: white;
+    -fx-font-size: 66;
+}
