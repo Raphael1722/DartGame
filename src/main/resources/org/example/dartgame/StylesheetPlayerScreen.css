@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rubik+Doodle+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Kanit&display=swap');
+
+.button{
+    -fx-background-color: #efefef;
+    -fx-font-family: Kanit;
+    -fx-font-size: 30;
+}
+.label{
+    -fx-font-family: "Rubik Doodle Shadow";
+    -fx-font-size: 20;
+}
+.pane{
+    -fx-background-color: #ff4545;
+}
+.text-field{
+    -fx-font-size: 20;
+}
