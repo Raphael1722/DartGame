@@ -27,6 +27,7 @@ public class PlayerScreen{
         BorderPane createP = new BorderPane();
         createP.getStyleClass().add("pane");
         GridPane grid = new GridPane();
+        grid.getStyleClass().add("left");
         GridPane gridRight = new GridPane();
         Scene first = new Scene(createP,800, 800);
 
@@ -41,7 +42,7 @@ public class PlayerScreen{
         Label three = new Label("Benutzername");
 
         // Buttons erstellen
-        Button back = new Button("Zurück");
+        Button back = new Button("Ally Pally");
         Button confirm = new Button("Bestätigen");
 
         //GrösseTextfield bestimmen
@@ -107,16 +108,16 @@ public class PlayerScreen{
                 System.out.println("Diese Daten, haben nicht den korrekten Datentyp");
             }
 
-            //Spieler wird mit den Daten erstellt
-            Player spieler = new Player(getNewName(), getNewAge(), getNewUsername(),0, 100);
+                    //Spieler wird mit den Daten erstellt
+                    Player spieler = new Player(getNewName(), getNewAge(), getNewUsername(),0, 100);
 
-            //Clear Textfield
-            oneTxt.setText("");
-            twoTxt.setText("");
-            threeTxt.setText("");
+                    //Clear Textfield
+                    oneTxt.setText("");
+                    twoTxt.setText("");
+                    threeTxt.setText("");
         });
         back.setOnAction(event ->{
-
+            new AllyPally(stage);
         });
 
 

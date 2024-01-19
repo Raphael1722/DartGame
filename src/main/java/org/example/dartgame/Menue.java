@@ -33,7 +33,7 @@ public class Menue extends Application {
         Scene ground = new Scene(border, 1300, 800, Color.BLACK);
 
         //Nodes erstellen
-        Button dart = new Button("Dart spielen");
+        Button dart = new Button("Ally Pally");
         Button player = new Button("Spieler erstellen");
         Label title = new Label("Ally Pally 4life");
         title.getStyleClass().add("title");
@@ -70,9 +70,14 @@ public class Menue extends Application {
         //Titel einbinden in grid
         top.add(title, 1,0);
 
-        //player-button click -> andere screen zeigen
+        //player-button click -> andere screen zu Spieler erstellen
         player.setOnAction(event ->{
             new PlayerScreen(primaryStage);
+        });
+
+        //Dartspielen-button click -> andere Screen zu Ally Pally
+        dart.setOnAction(event ->{
+            new AllyPally(primaryStage);
         });
 
         //Stylesheet einbinden

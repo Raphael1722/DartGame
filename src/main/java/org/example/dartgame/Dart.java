@@ -33,7 +33,7 @@ public class Dart extends Application{
     private static final int PREFERED_WIDTH = 1300;
     private static final int PREFERED_HIGHT = 800;
 
-    private static int step  = 15;
+    private static int step = 15;
     //Variablen
     private BorderPane root;
     private BorderPane rootWinn;
@@ -230,4 +230,5 @@ public class Dart extends Application{
     public void setPoint(int point) {
         this.point = point;
     }
+
 }
