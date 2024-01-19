@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rubik+Doodle+Shadow&display=swap');
 .pane{
     -fx-background-color: radial-gradient(center 50% 50%, radius 60%, reflect, royalblue, black );
     -fx-background-image: url("Dartscheibe-removebg.png");
@@ -17,4 +18,27 @@
 .Text{
     -fx-text-fill: black;
     -fx-font-size: 15;
+}
+.paneWinn{
+    -fx-background-image: url("https://images.dartprofis.de/news/2017/big/Dart_WM_2018_Finale_Vorschau_Pokal.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: 1300 800;
+}
+.winn{
+    -fx-font-size: 40;
+    -fx-text-fill: white;
+    -fx-font-family: "Rubik Doodle Shadow";
+    -fx-background-color: radial-gradient(center 50% 50%, radius 60%, reflect, royalblue, black ) ;
+    -fx-padding: 50 315 50 315;
+    -fx-background-size: 50 315;
+
+}
+.anzahlDart{
+    -fx-font-size: 40;
+    -fx-text-fill: white;
+    -fx-font-family: "Rubik Doodle Shadow";
+    -fx-background-color: radial-gradient(center 50% 50%, radius 60%, reflect, royalblue, black ) ;
+    -fx-padding: 50 312.5 50 312.5;
+    -fx-background-size: 50 315;
 }

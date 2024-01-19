@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36fd3e54-c913-48ea-bdb7-4385ce34d957" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/dartgame/StyleDart.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/PlayerScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/createPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/dartgame/Stylesheet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/dartgame/StylesheetPlayerScreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/dartgame/Dart_WM_2018_Finale_Vorschau_Pokal.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Dart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Dart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/AllyPally.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/AllyPally.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Menue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Menue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/dartgame/StyleDart.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/dartgame/StyleDart.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +47,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;Application.AllyPally.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Dart.executor&quot;: &quot;Run&quot;,
     &quot;Application.Menue.executor&quot;: &quot;Run&quot;,
     &quot;Application.createPlayer.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -60,7 +55,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/ProjektDart&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/HTML_Projekte/Dartboard&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -70,6 +65,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\HTML_Projekte\DartGame\src\main\resources\org\example\dartgame" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="createPlayer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.dartgame.createPlayer" />
@@ -90,25 +90,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Dart.executor": "Run",
-    "Application.Menue.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/HTML_Projekte/Dartboard",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -131,6 +112,7 @@
       <workItem from="1705558174491" duration="19080000" />
       <workItem from="1705066160184" duration="2096000" />
       <workItem from="1705557946733" duration="3855000" />
+      <workItem from="1705644159691" duration="7414000" />
     </task>
     <servers />
   </component>
