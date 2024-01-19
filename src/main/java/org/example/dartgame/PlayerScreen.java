@@ -127,6 +127,7 @@ public class PlayerScreen{
 
         //Stage bennenen und zeigen
         stage.setScene(first);
+        stage.setResizable(false);
         stage.setTitle("Player Menu");
         stage.show();
     }

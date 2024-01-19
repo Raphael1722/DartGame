@@ -77,7 +77,7 @@ public class Menue extends Application {
 
         //Dartspielen-button click -> andere Screen zu Ally Pally
         dart.setOnAction(event ->{
-                new AllyPally(primaryStage);
+            new AllyPally(primaryStage);
         });
 
         //Stylesheet einbinden
@@ -85,6 +85,7 @@ public class Menue extends Application {
 
         //Stage bennenen und zeigen
         primaryStage.setTitle("Darts Menue");
+        primaryStage.setResizable(false);
         primaryStage.setScene(ground);
         primaryStage.show();
 
@@ -94,3 +95,13 @@ public class Menue extends Application {
         launch();
     }
 }
+
+
+
+
+
+
+
+
+
+

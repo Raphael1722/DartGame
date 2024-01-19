@@ -88,6 +88,11 @@ public class AllyPally {
             if (difficulty.getValue() == "Schwer") {
                 setSchwierigkeit(20);
             }
+            try {
+                new Dart(stage,getVarModus(),getSchwierigkeit());
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         });
 
 
@@ -95,6 +100,7 @@ public class AllyPally {
         main.getStylesheets().add(getClass().getResource("StylesheetAllyPally.css").toExternalForm());
         //Stage bennenen und zeigen
         stage.setTitle("Ally Pally");
+        stage.setResizable(false);
         stage.setScene(main);
         stage.show();
     }
