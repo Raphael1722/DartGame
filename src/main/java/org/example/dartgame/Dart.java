@@ -29,6 +29,7 @@ import static javafx.application.Application.launch;
 
 //Klasse Dart wo dann das Dart gespielt wird
 public class Dart extends Application{
+
     //final Variablen
     private static final int PREFERED_WIDTH = 1300;
     private static final int PREFERED_HIGHT = 800;
