@@ -33,7 +33,7 @@ public class Menue extends Application {
         Scene ground = new Scene(border, 1300, 800, Color.BLACK);
 
         //Nodes erstellen
-        Button dart = new Button("Dart spielen");
+        Button dart = new Button("Ally Pally");
         Button player = new Button("Spieler erstellen");
         Label title = new Label("Ally Pally 4life");
         title.getStyleClass().add("title");

@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rubik+Doodle+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Kanit&display=swap');
+
+.pane{
+    -fx-background-image: url("https://amp.spox.com/de/sport/mehrsport/darts/2112/Bilder/ally-pally-london.jpg");
+}
+.text{
+    -fx-font-family: Kanit;
+    -fx-font-size: 20;
+    -fx-text-fill: white;
+}
+.title{
+    -fx-font-family: "Rubik Doodle Shadow", sans-serif;
+}
+.button{
+    -fx-font-size: 10;
+}
