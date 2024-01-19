@@ -88,8 +88,6 @@ public class AllyPally {
             if (difficulty.getValue() == "Schwer") {
                 setSchwierigkeit(20);
             }
-
-
         });
 
 

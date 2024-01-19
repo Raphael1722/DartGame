@@ -77,7 +77,7 @@ public class Menue extends Application {
 
         //Dartspielen-button click -> andere Screen zu Ally Pally
         dart.setOnAction(event ->{
-            AllyPally test = new AllyPally(primaryStage);
+                new AllyPally(primaryStage);
         });
 
         //Stylesheet einbinden
