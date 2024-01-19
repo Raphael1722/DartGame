@@ -33,7 +33,7 @@ public class Dart extends Application{
     private static final int PREFERED_WIDTH = 1300;
     private static final int PREFERED_HIGHT = 800;
 
-    private static final int STEP  = 15;
+    private static int STEP;
     //Variablen
     private BorderPane root;
     private FlowPane flow;
