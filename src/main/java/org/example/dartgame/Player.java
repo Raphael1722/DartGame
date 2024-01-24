@@ -1,13 +1,13 @@
 package org.example.dartgame;
 public class Player  extends Person {
     String username;
-    int wincounter;
+    int winCounter;
     int credit;
 
     public Player(String name, int age, String username, int wincounter, int credit){
         super(name,age);
         this.username = username;
-        this.wincounter = 0;
+        this.winCounter = 0;
         this.credit = 50;
     }
 
@@ -24,11 +24,11 @@ public class Player  extends Person {
     }
 
     public int getWincounter() {
-        return wincounter;
+        return winCounter;
     }
 
     public void setWincounter(int wincounter) {
-        this.wincounter = wincounter;
+        this.winCounter = wincounter;
     }
 
     public int getCredit() {
