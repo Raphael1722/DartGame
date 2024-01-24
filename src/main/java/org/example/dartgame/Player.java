@@ -4,7 +4,7 @@ public class Player  extends Person {
     int wincounter;
     int credit;
 
-    public Player(String name, int age, String username, int wincounter, int credit){
+    public Player(String name, int age, String username){
         super(name,age);
         this.username = username;
         this.wincounter = 0;
