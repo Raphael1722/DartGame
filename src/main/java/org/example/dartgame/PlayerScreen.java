@@ -105,17 +105,19 @@ public class PlayerScreen{
             setNewName(oneTxt.getText());
             setNewAge(Integer.parseInt(twoTxt.getText()));
             setNewUsername(threeTxt.getText());
+            //Clear Textfield
+            oneTxt.clear();
+            twoTxt.clear();
+            threeTxt.clear();
             }catch (NumberFormatException e){
-                System.out.println("Diese Daten, haben nicht den korrekten Datentyp");
+                oneTxt.clear();
+                twoTxt.clear();
+                threeTxt.clear();
+                twoTxt.appendText("Dies war kein Alter");
             }
-
                     //Spieler wird mit den Daten erstellt
                     spielerOwn = new Player(getNewName(), getNewAge(), getNewUsername());
 
-                    //Clear Textfield
-                    oneTxt.setText("");
-                    twoTxt.setText("");
-                    threeTxt.setText("");
         });
         back.setOnAction(event ->{
             new AllyPally(stage,getSpielerOwn());

@@ -239,10 +239,13 @@ public class Dart{
                 textField.clear();
                 textField.setPromptText("Hier Punkte eingeben");
                 if (point == 0) {
+                    //Winscreen anzeigen lassem
                     primarySage.setTitle("Gewonnen");
                     primarySage.setScene(winnScreen);
+                    //Spieler bekommte durch den Win Wincounter mehr und bekommt Credits
                     player.setWincounter(+1);
                     player.earnCredit(+20);
+                    //Wenn die Wette stimmt, bekommt der Spieler das doppelte vom Einsatz zurück
                     if(dartCounter < wurf){
                         player.earnCredit(amount*2);
                     }
@@ -261,7 +264,6 @@ public class Dart{
                     textField.setDisable(true);
                 }
             }
-
         }catch (NumberFormatException numberFormatException){
             textField.clear();
             textField.appendText("Das war keine Zahl Null Punkte");
@@ -278,5 +280,4 @@ public class Dart{
     public void setPoint(int point) {
         this.point = point;
     }
-
 }

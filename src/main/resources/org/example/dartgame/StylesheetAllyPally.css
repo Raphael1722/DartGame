@@ -27,3 +27,9 @@
 .CheckBox{
     -fx-font-size: 30;
 }
+.credit{
+    -fx-font-size: 25;
+    -fx-text-fill: white;
+    -fx-font-family: Kanit;
+    -fx-padding: 0 0 0 20;
+}
