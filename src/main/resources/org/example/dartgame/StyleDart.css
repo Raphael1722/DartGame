@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rubik+Doodle+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Kanit&display=swap');
 .pane{
     -fx-background-color: radial-gradient(center 50% 50%, radius 60%, reflect, royalblue, black );
     -fx-background-image: url("Dartscheibe-removebg.png");
@@ -41,4 +42,22 @@
     -fx-background-color: radial-gradient(center 50% 50%, radius 60%, reflect, royalblue, black ) ;
     -fx-padding: 50 312.5 50 312.5;
     -fx-background-size: 50 315;
+}
+.name{
+    -fx-font-size: 50;
+    -fx-text-fill: white;
+    -fx-padding: 0 20 0 20;
+    -fx-font-family: Kanit;
+}
+.winCounter{
+    -fx-font-size: 20;
+    -fx-text-fill: white;
+    -fx-padding: 0 0 0 20;
+    -fx-font-family: Kanit;
+}
+.buttonSpielen{
+    -fx-font-family: Kanit;
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+    -fx-background-color: radial-gradient(center 50% 50%, radius 60%, reflect, royalblue, black );
 }

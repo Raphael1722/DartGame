@@ -15,7 +15,7 @@ public class AllyPally {
     private int varModus;
     private int schwierigkeit;
 
-    public AllyPally(Stage stage) {
+    public AllyPally(Stage stage, Player spieler) {
         //Grundriss erstellen
         BorderPane screen = new BorderPane();
         screen.getStyleClass().add("pane");
@@ -89,7 +89,7 @@ public class AllyPally {
                 setSchwierigkeit(20);
             }
             try {
-                new Dart(stage,getVarModus(),getSchwierigkeit());
+                new Dart(stage,getVarModus(),getSchwierigkeit(), spieler);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

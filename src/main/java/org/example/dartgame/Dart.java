@@ -21,6 +21,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import org.controlsfx.dialog.Wizard;
 
 import java.io.Console;
 import java.nio.channels.ClosedByInterruptException;
@@ -47,28 +48,50 @@ public class Dart{
     private int counter;
     private int point = 501;
     private int dartCounter = 0;
-
     private Stage primarySage;
     private Scene winnScreen;
-
-
-
+    private FlowPane flowLeft;
+    private Label name;
+    private Label winCounter;
+    private Player player;
+    private Button erneutSpielen;
+    private GridPane gridWin;
 
     //start Methode wo alles gestartet wird
-    public Dart(Stage primaryStage, int point, int step) throws InterruptedException {
+    public Dart(Stage primaryStage, int point, int step, Player spieler) throws InterruptedException {
         this.point = point;
         this.step = step;
-        primarySage = new Stage();
+        primarySage = primaryStage;
+        player = spieler;
 
         //Border und Flow Pane erstellen
         root = new BorderPane();
         flow = new FlowPane();
+        flowLeft = new FlowPane();
         rootWinn = new BorderPane();
-
+        //Label für Spieler
+        name = new Label(player.getUsername());
+        winCounter = new Label("Wincounter: "+player.getWincounter());
         //Label für Gewonnen
         winn = new Label("Du hast Gewonnen gut gemacht");
         rootWinn.setTop(winn);
         winn.getStyleClass().add("winn");
+        //Grösse und Anzahl für gridPane definieren
+        gridWin = new GridPane();
+        gridWin.getRowConstraints().add(new RowConstraints(200));
+        gridWin.getRowConstraints().add(new RowConstraints(100));
+        //+
+        gridWin.getColumnConstraints().add(new ColumnConstraints(200));
+        gridWin.getColumnConstraints().add(new ColumnConstraints(50));
+        //Button für Gewonnen
+        erneutSpielen = new Button("Erneut Spielen");
+        erneutSpielen.setShape(new Circle(1.5));
+        erneutSpielen.setPrefSize(200,100);
+        rootWinn.setRight(gridWin);
+        //Button in CSS einbinden
+        erneutSpielen.getStyleClass().add("buttonSpielen");
+        //GridPane in BorderPane einbinden
+        gridWin.add(erneutSpielen, 0,1);
         //Label Anzahl Darts
         anzahlDart = new TextField();
         anzahlDart.appendText("Du hast: " + Integer.toString(dartCounter) + " würfe gebraucht");
@@ -78,7 +101,7 @@ public class Dart{
         //Text Field erstellen
         textField = new TextField();
         textField.setPromptText("Hier Punkte eingeben");
-        textField.setPrefSize(200, 100);
+        textField.setPrefSize(260, 100);
         textField.setDisable(true);
         root.setPrefSize(PREFERED_WIDTH, PREFERED_HIGHT);
         rootWinn.setPrefSize(PREFERED_WIDTH,PREFERED_HIGHT);
@@ -97,6 +120,15 @@ public class Dart{
 
         //in rechte Border Pane ein Flow Pane gemacht
         root.setRight(flow);
+
+        //FlowPane links Vertical ausgerichtet
+        flowLeft.setOrientation(Orientation.VERTICAL);
+        //FlowPane links in Border Pane hinzufügen
+        root.setLeft(flowLeft);
+        //Labels in FlowPane hinzufügen
+        flowLeft.getChildren().add(name);
+        flowLeft.getChildren().add(winCounter);
+
         //Text Field und Point Label in Flow Pain gemacht
         flow.getChildren().add(labelPoint);
         flow.getChildren().add(textField);
@@ -115,6 +147,9 @@ public class Dart{
         //an root Style Class pane gegeben
         root.getStyleClass().add("pane");
         rootWinn.getStyleClass().add("paneWinn");
+        //Labels in CSS einbinden
+        name.getStyleClass().add("name");
+        winCounter.getStyleClass().add("winCounter");
 
         //Titel an Stage gegeben
         primarySage.setTitle("Dart Game");
@@ -149,20 +184,14 @@ public class Dart{
                 counter++;
             }
         });
-
-
+        erneutSpielen.setOnAction(actionEvent -> {
+            new AllyPally(primaryStage,player);
+        });
 
         //Scene setzten und zeigen
         primarySage.setScene(scene);
         primarySage.setResizable(false);
         primarySage.show();
-
-
-
-
-
-
-
 
     }
     //Funktion newDart. Wird ein neuer Kreis also der Dart erstellt und geaddet.
@@ -199,6 +228,8 @@ public class Dart{
                 if (point == 0) {
                     primarySage.setTitle("Gewonnen");
                     primarySage.setScene(winnScreen);
+                    player.setWincounter(+1);
+                    player.earnCredit(+20);
                 } else if (point < 0) {
                     setPoint(point + geworfenePunkte);
                     labelPoint.clear();

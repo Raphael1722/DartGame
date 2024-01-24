@@ -21,9 +21,9 @@ import static javafx.application.Application.launch;
 
 public class Menue extends Application {
 
+    private Player spieler = new Player("Gast", 100,"Guestuser",0,0);
     @Override
     public void start(Stage primaryStage) throws Exception{
-
         //Grundriss erstellen
         BorderPane border = new BorderPane();
         GridPane main = new GridPane();
@@ -77,7 +77,7 @@ public class Menue extends Application {
 
         //Dartspielen-button click -> andere Screen zu Ally Pally
         dart.setOnAction(event ->{
-            new AllyPally(primaryStage);
+            new AllyPally(primaryStage, getSpieler());
         });
 
         //Stylesheet einbinden
@@ -94,7 +94,16 @@ public class Menue extends Application {
     public static void main(String[] args) {
         launch();
     }
+
+    public Player getSpieler() {
+        return spieler;
+    }
+
+    public void setSpieler(Player spieler) {
+        this.spieler = spieler;
+    }
 }
+
 
 
 
