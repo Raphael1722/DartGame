@@ -29,7 +29,7 @@ public class PlayerScreen{
         GridPane grid = new GridPane();
         grid.getStyleClass().add("left");
         GridPane gridRight = new GridPane();
-        Scene first = new Scene(createP,800, 800);
+        Scene first = new Scene(createP,1300, 800);
 
         //Textfield erstellen
         TextField oneTxt =  new TextField();
@@ -46,9 +46,9 @@ public class PlayerScreen{
         Button confirm = new Button("Bestätigen");
 
         //GrösseTextfield bestimmen
-        oneTxt.setPrefSize(400,150);
-        twoTxt.setPrefSize(10,150);
-        threeTxt.setPrefSize(10,150);
+        oneTxt.setPrefSize(10,125);
+        twoTxt.setPrefSize(10,125);
+        threeTxt.setPrefSize(10,125);
 
         //Nodes zum grid hinzufügen
         grid.add(oneTxt, 0, 2);
@@ -59,7 +59,7 @@ public class PlayerScreen{
         grid.add(three,0,7);
 
         //Grid grösse und Anzahl bestimmen
-        grid.getColumnConstraints().add(new ColumnConstraints(400));
+        grid.getColumnConstraints().add(new ColumnConstraints(600));
         // +
         grid.getRowConstraints().add(new RowConstraints(50));
         grid.getRowConstraints().add(new RowConstraints(100));
@@ -127,6 +127,7 @@ public class PlayerScreen{
 
         //Stage bennenen und zeigen
         stage.setScene(first);
+        stage.setResizable(false);
         stage.setTitle("Player Menu");
         stage.show();
     }

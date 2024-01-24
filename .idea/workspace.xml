@@ -6,7 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="36fd3e54-c913-48ea-bdb7-4385ce34d957" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/AllyPally.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/AllyPally.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Dart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Dart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Menue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Menue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/PlayerScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/PlayerScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/dartgame/StylesheetAllyPally.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/dartgame/StylesheetAllyPally.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/dartgame/StylesheetPlayerScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/dartgame/StylesheetPlayerScreen.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +43,8 @@
     </option>
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
-}</component>
+    &quot;associatedIndex&quot;: 6
+    }</component>
   <component name="ProjectId" id="2ar8IoxUP3JhXjACLLCXI8ey2xj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -51,7 +59,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Merging master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/HTML_Projekte/Dartboard&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
@@ -68,7 +76,7 @@
       <recent name="C:\HTML_Projekte\DartGame\src\main\resources\org\example\dartgame" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Menue">
     <configuration name="Menue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.dartgame.Menue" />
       <module name="DartGame" />
@@ -125,6 +133,7 @@
       <workItem from="1705066160184" duration="2096000" />
       <workItem from="1705557946733" duration="3855000" />
       <workItem from="1705644159691" duration="7414000" />
+      <workItem from="1706078535372" duration="8631000" />
     </task>
     <servers />
   </component>
@@ -157,11 +166,6 @@
           <properties class="java.lang.IllegalArgumentException" package="java.lang" />
           <option name="timeStamp" value="5" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/dartgame/HelloController.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

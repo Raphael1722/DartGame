@@ -85,6 +85,7 @@ public class Menue extends Application {
 
         //Stage bennenen und zeigen
         primaryStage.setTitle("Darts Menue");
+        primaryStage.setResizable(false);
         primaryStage.setScene(ground);
         primaryStage.show();
 

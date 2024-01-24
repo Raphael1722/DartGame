@@ -28,8 +28,7 @@ import java.security.Key;
 import static javafx.application.Application.launch;
 
 //Klasse Dart wo dann das Dart gespielt wird
-public class Dart extends Application{
-
+public class Dart{
     //final Variablen
     private static final int PREFERED_WIDTH = 1300;
     private static final int PREFERED_HIGHT = 800;
@@ -54,10 +53,11 @@ public class Dart extends Application{
 
 
 
-    @Override
-    //start Methode wo alles gestartet wird
-    public void start(Stage primaryStage) throws InterruptedException {
 
+    //start Methode wo alles gestartet wird
+    public Dart(Stage primaryStage, int point, int step) throws InterruptedException {
+        this.point = point;
+        this.step = step;
         primarySage = new Stage();
 
         //Border und Flow Pane erstellen
