@@ -21,7 +21,7 @@ public class AllyPally {
     private ChoiceBox mode;
     private ChoiceBox difficulty;
 
-    public AllyPally(Stage stage) {
+    public AllyPally(Stage stage, Player spieler) {
         //Grundriss erstellen
         insane = new GridPane();
         screen = new BorderPane();
@@ -87,7 +87,7 @@ public class AllyPally {
                 setSchwierigkeit(20);
             }
             try {
-                new Dart(stage,getVarModus(),getSchwierigkeit());
+                new Dart(stage,getVarModus(),getSchwierigkeit(), spieler);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

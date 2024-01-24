@@ -20,6 +20,7 @@ public class PlayerScreen{
     private String newName;
     private int newAge;
     private String newUsername;
+    private Player spielerOwn;
 
     public PlayerScreen(Stage stage){
 
@@ -109,7 +110,7 @@ public class PlayerScreen{
             }
 
                     //Spieler wird mit den Daten erstellt
-                    Player spieler = new Player(getNewName(), getNewAge(), getNewUsername(),0, 100);
+                    spielerOwn = new Player(getNewName(), getNewAge(), getNewUsername(),0, 100);
 
                     //Clear Textfield
                     oneTxt.setText("");
@@ -117,7 +118,7 @@ public class PlayerScreen{
                     threeTxt.setText("");
         });
         back.setOnAction(event ->{
-            new AllyPally(stage);
+            new AllyPally(stage,getSpielerOwn());
         });
 
 
@@ -155,5 +156,13 @@ public class PlayerScreen{
 
     public void setNewUsername(String newUsername) {
         this.newUsername = newUsername;
+    }
+
+    public Player getSpielerOwn() {
+        return spielerOwn;
+    }
+
+    public void setSpielerOwn(Player spielerOwn) {
+        this.spielerOwn = spielerOwn;
     }
 }
