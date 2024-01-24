@@ -110,7 +110,7 @@ public class PlayerScreen{
             }
 
                     //Spieler wird mit den Daten erstellt
-                    spielerOwn = new Player(getNewName(), getNewAge(), getNewUsername(),0, 100);
+                    spielerOwn = new Player(getNewName(), getNewAge(), getNewUsername());
 
                     //Clear Textfield
                     oneTxt.setText("");

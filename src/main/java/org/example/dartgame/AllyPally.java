@@ -9,6 +9,8 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+import javax.swing.*;
+
 import static javafx.application.Application.launch;
 
 public class AllyPally {
@@ -20,6 +22,9 @@ public class AllyPally {
     private Label allyPally;
     private ChoiceBox mode;
     private ChoiceBox difficulty;
+    private int amount;
+    private int wurf;
+
 
     public AllyPally(Stage stage, Player spieler) {
         //Grundriss erstellen
@@ -74,8 +79,10 @@ public class AllyPally {
         goOn.setOnAction(event -> {
             if (mode.getValue() == "501") {
                 setVarModus(501);
+                wurf = 12;
             } else {
                 setVarModus(301);
+                wurf = 9;
             }
             if (difficulty.getValue() == "Einfach") {
                 setSchwierigkeit(10);
@@ -86,8 +93,14 @@ public class AllyPally {
             if (difficulty.getValue() == "Schwer") {
                 setSchwierigkeit(20);
             }
+
+            amount = Integer.parseInt(JOptionPane.showInputDialog(null, "Du hast "+spieler.getCredit()+" Credits. Geben sie ihren Einsatz ein, um die Punktzah in "+wurf+ " Würfen zu knaken!"));
+            if(amount > spieler.getCredit()){
+                amount = Integer.parseInt(JOptionPane.showInputDialog(null, "Du hast zu wenig Credits"));
+            }
+            spieler.setCredit(spieler.getCredit() - amount);
             try {
-                new Dart(stage,getVarModus(),getSchwierigkeit(), spieler);
+                new Dart(stage,getVarModus(),getSchwierigkeit(), spieler, amount, wurf);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

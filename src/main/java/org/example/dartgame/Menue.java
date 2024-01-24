@@ -21,7 +21,7 @@ import static javafx.application.Application.launch;
 
 public class Menue extends Application {
 
-    private Player spieler = new Player("Gast", 100,"Guestuser",0,0);
+    private Player spieler = new Player("Gast", 100,"Guestuser");
     @Override
     public void start(Stage primaryStage) throws Exception{
         //Grundriss erstellen

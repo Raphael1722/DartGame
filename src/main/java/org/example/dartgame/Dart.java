@@ -2,6 +2,7 @@ package org.example.dartgame;
 
 //imports
 import com.almasb.fxgl.core.Updatable;
+import eu.hansolo.tilesfx.addons.Switch;
 import eu.hansolo.tilesfx.tools.Point;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -23,6 +24,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import org.controlsfx.dialog.Wizard;
 
+import javax.swing.*;
 import java.io.Console;
 import java.nio.channels.ClosedByInterruptException;
 import java.security.Key;
@@ -56,13 +58,21 @@ public class Dart{
     private Player player;
     private Button erneutSpielen;
     private GridPane gridWin;
+    private Label creditAmount;
+    private int amount;
+    private int wurf;
+
 
     //start Methode wo alles gestartet wird
-    public Dart(Stage primaryStage, int point, int step, Player spieler) throws InterruptedException {
+    public Dart(Stage primaryStage, int point, int step, Player spieler,int amount, int wurf) throws InterruptedException {
         this.point = point;
         this.step = step;
         primarySage = primaryStage;
         player = spieler;
+        this.amount = amount;
+        this.wurf = wurf;
+
+
 
         //Border und Flow Pane erstellen
         root = new BorderPane();
@@ -72,6 +82,7 @@ public class Dart{
         //Label für Spieler
         name = new Label(player.getUsername());
         winCounter = new Label("Wincounter: "+player.getWincounter());
+        creditAmount = new Label("Credits: "+player.getCredit());
         //Label für Gewonnen
         winn = new Label("Du hast Gewonnen gut gemacht");
         rootWinn.setTop(winn);
@@ -128,6 +139,7 @@ public class Dart{
         //Labels in FlowPane hinzufügen
         flowLeft.getChildren().add(name);
         flowLeft.getChildren().add(winCounter);
+        flowLeft.getChildren().add(creditAmount);
 
         //Text Field und Point Label in Flow Pain gemacht
         flow.getChildren().add(labelPoint);
@@ -150,6 +162,7 @@ public class Dart{
         //Labels in CSS einbinden
         name.getStyleClass().add("name");
         winCounter.getStyleClass().add("winCounter");
+        creditAmount.getStyleClass().add("winCounter");
 
         //Titel an Stage gegeben
         primarySage.setTitle("Dart Game");
@@ -229,7 +242,7 @@ public class Dart{
                     primarySage.setTitle("Gewonnen");
                     primarySage.setScene(winnScreen);
                     player.setWincounter(+1);
-                    player.earnCredit(+20);
+                    player.earnCredit(player.calculateWin(amount,wurf));
                 } else if (point < 0) {
                     setPoint(point + geworfenePunkte);
                     labelPoint.clear();

@@ -4,7 +4,7 @@ public class Player  extends Person {
     int winCounter;
     int credit;
 
-    public Player(String name, int age, String username, int wincounter, int credit){
+    public Player(String name, int age, String username){
         super(name,age);
         this.username = username;
         this.winCounter = 0;
@@ -13,6 +13,11 @@ public class Player  extends Person {
 
     public void earnCredit(int gewinn){
         this.credit += gewinn;
+    }
+
+    public int calculateWin(int pot, int anzahlWürfe){
+        int win = pot * 3 / anzahlWürfe - 8;
+        return win;
     }
 
     public String getUsername() {
