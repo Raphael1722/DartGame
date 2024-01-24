@@ -14,59 +14,57 @@ import static javafx.application.Application.launch;
 public class AllyPally {
     private int varModus;
     private int schwierigkeit;
+    private BorderPane screen;
+    private GridPane grid;
+    private GridPane insane;
+    private Label allyPally;
+    private ChoiceBox mode;
+    private ChoiceBox difficulty;
 
     public AllyPally(Stage stage, Player spieler) {
         //Grundriss erstellen
-        BorderPane screen = new BorderPane();
+        insane = new GridPane();
+        screen = new BorderPane();
         screen.getStyleClass().add("pane");
-        Scene main = new Scene(screen, 800, 600);
-        GridPane gridTop = new GridPane();
-        GridPane gridCenter = new GridPane();
-        ChoiceBox mode = new ChoiceBox();
-        ChoiceBox difficulty = new ChoiceBox();
+        grid = new GridPane();
+        Scene main = new Scene(screen, 1300, 800);
+        allyPally = new Label("Ally Pally");
+        mode = new ChoiceBox();
+        difficulty = new ChoiceBox();
         Label modeL = new Label("Modus");
         Label difficultyL = new Label("Schwierigkeit");
-        modeL.getStyleClass().add("text");
-        difficultyL.getStyleClass().add("text");
-        Label allyPally = new Label("Ally Pally");
-        allyPally.getStyleClass().add("title");
+        allyPally.getStyleClass().add("allyPally");
+        modeL.getStyleClass().add("next");
+        difficultyL.getStyleClass().add("next");
+        mode.getStyleClass().add("CheckBox");
+        difficulty.getStyleClass().add("CheckBox");
+
+
 
         Button goOn = new Button("Weiter");
 
-        //Grid Grösse und Anzahl erstellen
-        gridTop.getColumnConstraints().add(new ColumnConstraints(200));
-        gridTop.getColumnConstraints().add(new ColumnConstraints(400));
-        gridTop.getColumnConstraints().add(new ColumnConstraints(200));
-        //+
-        gridTop.getRowConstraints().add(new RowConstraints(200));
-        //Titel zu Grid hinzufügen
-        gridTop.add(allyPally, 1, 0);
+        screen.setTop(allyPally);
+        screen.setCenter(grid);
+        screen.setRight(insane);
 
-        //Grid Grösse und Anzahl bestimmen
-        gridCenter.getColumnConstraints().add(new ColumnConstraints(200));
-        gridCenter.getColumnConstraints().add(new ColumnConstraints(200));
-        gridCenter.getColumnConstraints().add(new ColumnConstraints(200));
-        gridCenter.getColumnConstraints().add(new ColumnConstraints(200));
-        //+
-        gridCenter.getRowConstraints().add(new RowConstraints(50));
-        gridCenter.getRowConstraints().add(new RowConstraints(150));
-        gridCenter.getRowConstraints().add(new RowConstraints(150));
-        gridCenter.getRowConstraints().add(new RowConstraints(50));
+        grid.add(modeL,0,0);
+        grid.add(mode,1,0);
+        grid.add(difficultyL,0,1);
+        grid.add(difficulty,1,1);
 
-        //Grid in BorderPane hinzufügen
-        screen.setTop(gridTop);
-        screen.setCenter(gridCenter);
+        insane.getRowConstraints().add(new RowConstraints(200));
+        insane.getRowConstraints().add(new RowConstraints(220));
+        insane.getRowConstraints().add(new RowConstraints(260));
 
-        //Mode Label und Choicebox hinzufügen
-        gridCenter.add(mode, 2, 0);
-        gridCenter.add(modeL, 1, 0);
-        //Difficulty Label und Choicebox hinzufügen
-        gridCenter.add(difficulty, 2, 2);
-        gridCenter.add(difficultyL, 1, 2);
-        //Weiter-button hinzufügen
-        gridCenter.add(goOn, 3, 2);
+        grid.getRowConstraints().add(new RowConstraints(300));
+        grid.getRowConstraints().add(new RowConstraints(300));
+
+        insane.add(goOn, 0, 1);
+
         //Grösse Weiter-button setzten
-        goOn.setPrefSize(150, 50);
+        goOn.setPrefSize(300, 50);
+        goOn.snapPositionX(1000);
+        goOn.snapPositionY(400);
 
         //Daten in Choicebox geben
         mode.getItems().addAll("501", "301");

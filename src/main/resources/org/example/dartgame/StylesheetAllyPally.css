@@ -1,17 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rubik+Doodle+Shadow&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rubik+Doodle+Shadow&display=swap');
 
 .pane{
     -fx-background-image: url("https://amp.spox.com/de/sport/mehrsport/darts/2112/Bilder/ally-pally-london.jpg");
+    -fx-background-size: 1300 800;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
 }
-.text{
-    -fx-font-family: Kanit;
-    -fx-font-size: 20;
-    -fx-text-fill: white;
-}
-.title{
-    -fx-font-family: "Rubik Doodle Shadow", sans-serif;
+
+.allyPally{
+    -fx-font-size: 90;
+    -fx-font-family: "Rubik Doodle Shadow";
+    -fx-text-fill: White;
+    -fx-padding: 0 0 0 450;
 }
 .button{
-    -fx-font-size: 10;
+    -fx-font-size: 30;
+}
+
+.next{
+    -fx-font-size: 50;
+    -fx-text-fill: White;
+    -fx-padding: 0 20 0 20;
+    -fx-font-family: Kanit;
+}
+.CheckBox{
+    -fx-font-size: 30;
 }
