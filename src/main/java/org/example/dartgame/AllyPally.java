@@ -22,6 +22,7 @@ public class AllyPally {
     private Label allyPally;
     private ChoiceBox mode;
     private ChoiceBox difficulty;
+    private Label credit;
     private int amount;
     private int wurf;
 
@@ -38,6 +39,8 @@ public class AllyPally {
         difficulty = new ChoiceBox();
         Label modeL = new Label("Modus");
         Label difficultyL = new Label("Schwierigkeit");
+        Label credit = new Label("Credits: "+spieler.getCredit());
+        credit.getStyleClass().add("credit");
         allyPally.getStyleClass().add("allyPally");
         modeL.getStyleClass().add("next");
         difficultyL.getStyleClass().add("next");
@@ -56,6 +59,9 @@ public class AllyPally {
         grid.add(mode,1,0);
         grid.add(difficultyL,0,1);
         grid.add(difficulty,1,1);
+        grid.add(credit,0,2);
+
+
 
         insane.getRowConstraints().add(new RowConstraints(200));
         insane.getRowConstraints().add(new RowConstraints(220));
@@ -93,10 +99,13 @@ public class AllyPally {
             if (difficulty.getValue() == "Schwer") {
                 setSchwierigkeit(20);
             }
-
+            try{
             amount = Integer.parseInt(JOptionPane.showInputDialog(null, "Du hast "+spieler.getCredit()+" Credits. Geben sie ihren Einsatz ein, um die Punktzah in "+wurf+ " Würfen zu knaken!"));
+            }catch (NumberFormatException e){
+                amount = Integer.parseInt(JOptionPane.showInputDialog(null, "Du hast nicht Credits eingegeben, versuch es nochmal!"));
+            }
             if(amount > spieler.getCredit()){
-                amount = Integer.parseInt(JOptionPane.showInputDialog(null, "Du hast zu wenig Credits"));
+                amount = Integer.parseInt(JOptionPane.showInputDialog(null, "Du hast zu wenig Credits!"));
             }
             spieler.setCredit(spieler.getCredit() - amount);
             try {

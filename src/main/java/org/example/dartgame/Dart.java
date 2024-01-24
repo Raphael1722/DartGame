@@ -61,11 +61,13 @@ public class Dart{
     private Label creditAmount;
     private int amount;
     private int wurf;
+    private int anfangPunkte;
 
 
     //start Methode wo alles gestartet wird
     public Dart(Stage primaryStage, int point, int step, Player spieler,int amount, int wurf) throws InterruptedException {
         this.point = point;
+        this.anfangPunkte = point;
         this.step = step;
         primarySage = primaryStage;
         player = spieler;
@@ -239,10 +241,16 @@ public class Dart{
                 textField.clear();
                 textField.setPromptText("Hier Punkte eingeben");
                 if (point == 0) {
+                    //Winscreen anzeigen lassem
                     primarySage.setTitle("Gewonnen");
                     primarySage.setScene(winnScreen);
+                    //Spieler bekommte durch den Win Wincounter mehr und bekommt Credits
                     player.setWincounter(+1);
-                    player.earnCredit(player.calculateWin(amount,wurf));
+                    player.earnCredit(+20);
+                    //Wenn die Wette stimmt, bekommt der Spieler das doppelte vom Einsatz zurück
+                    if(dartCounter < wurf){
+                        player.earnCredit(player.calculateWin(amount,wurf,anfangPunkte));
+                    }
                 } else if (point < 0) {
                     setPoint(point + geworfenePunkte);
                     labelPoint.clear();
@@ -258,7 +266,6 @@ public class Dart{
                     textField.setDisable(true);
                 }
             }
-
         }catch (NumberFormatException numberFormatException){
             textField.clear();
             textField.appendText("Das war keine Zahl Null Punkte");
@@ -275,5 +282,4 @@ public class Dart{
     public void setPoint(int point) {
         this.point = point;
     }
-
 }

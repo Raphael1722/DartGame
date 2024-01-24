@@ -15,9 +15,15 @@ public class Player  extends Person {
         this.credit += gewinn;
     }
 
-    public int calculateWin(int pot, int anzahlWürfe){
-        int win = pot * 3 / anzahlWürfe - 8;
-        return win;
+    public int calculateWin(int pot, int anzahlWürfe,int points){
+        if (points == 501){
+            int win = (pot * 3) / (anzahlWürfe - 8);
+            return win;
+        }
+        else  {
+            int win = (pot*3)/(anzahlWürfe-5);
+            return win;
+        }
     }
 
     public String getUsername() {
