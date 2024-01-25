@@ -30,7 +30,13 @@ import java.nio.channels.ClosedByInterruptException;
 import java.security.Key;
 import static javafx.application.Application.launch;
 
-//Klasse Dart wo dann das Dart gespielt wird
+/**
+ * Dies ist die Klasse wo das Dart Game gespielt wird
+ *
+ * @author MüllerR
+ * @author NussL
+ * @version 1.0
+ */
 public class Dart{
     //final Variablen
     private static final int PREFERED_WIDTH = 1300;
@@ -64,7 +70,13 @@ public class Dart{
     private int anfangPunkte;
 
 
-    //start Methode wo alles gestartet wird
+    /**
+     * Dies ist der Konstruktor der Klasse der Automatisch das GUI macht wenn er gestartet wird
+     *
+     * @author MüllerR
+     * @author NussL
+     * @version 1.0
+     */
     public Dart(Stage primaryStage, int point, int step, Player spieler,int amount, int wurf) throws InterruptedException {
         this.point = point;
         this.anfangPunkte = point;
@@ -209,21 +221,45 @@ public class Dart{
         primarySage.show();
 
     }
-    //Funktion newDart. Wird ein neuer Kreis also der Dart erstellt und geaddet.
+    /**
+     * Dies ist die Methode welche den Dart erstellt
+     *
+     * @author MüllerR
+     * @author NussL
+     * @version 1.0
+     */
     public void newDart(){
         dart = new Circle(100,700,3);
         root.getChildren().add(dart);
         dart.getStyleClass().add("dart");
     }
-    //Funktion dartLinksRecht um Dart nach rechts zu verschieben
+    /**
+     * Dies ist die Methode welche den Dart nach rechts gehen lässt
+     *
+     * @author MüllerR
+     * @author NussL
+     * @version 1.0
+     */
     public void dartLinksRechts(){
         dart.setCenterX(dart.getCenterX() + step);
     }
-    //Funktion dartObenUnten um Dart nach oben zu bewegen
+    /**
+     * Dies ist die Methode welche den Dart nach oben gehen lässt
+     *
+     * @author MüllerR
+     * @author NussL
+     * @version 1.0
+     */
     public void dartObenUnten(){
         dart.setCenterY(dart.getCenterY() - step);
     }
-    //Funktion takePoint soll Punkte von Textfield nehmen und Minus rechnen.
+    /**
+     * Dies ist die Methode welche die Punkte entgegen nimmt und den Dart wieder an seinen ausgangspunkt macht
+     *
+     * @author MüllerR
+     * @author NussL
+     * @version 1.0
+     */
     public void takePoint(){
         status = true;
         counter = 0;
@@ -274,6 +310,7 @@ public class Dart{
             dart.setCenterY(700);
         }
     }
+
     //Getter und Setter
     public int getPoint() {
         return point;

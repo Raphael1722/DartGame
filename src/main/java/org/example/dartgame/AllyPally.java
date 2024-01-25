@@ -12,7 +12,13 @@ import javafx.stage.Stage;
 import javax.swing.*;
 
 import static javafx.application.Application.launch;
-
+/**
+ * Dies ist die Klasse Ally Pally hier kann man Modus und Schwierigkeit wählen
+ *
+ * @author MüllerR
+ * @author NussL
+ * @version 1.0
+ */
 public class AllyPally {
     private int varModus;
     private int schwierigkeit;
@@ -26,7 +32,13 @@ public class AllyPally {
     private int amount;
     private int wurf;
 
-
+    /**
+     * Dies ist der Konstruktor von Ally Pally
+     *
+     * @author MüllerR
+     * @author NussL
+     * @version 1.0
+     */
     public AllyPally(Stage stage, Player spieler) {
         //Grundriss erstellen
         insane = new GridPane();

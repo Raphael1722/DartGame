@@ -1,4 +1,11 @@
 package org.example.dartgame;
+/**
+ * Dies ist die Abstrakte Klasse Person welche das Grundgerüst von Commentator und Player ist
+ *
+ * @author MüllerR
+ * @author NussL
+ * @version 1.0
+ */
 public abstract class Person {
     private String name;
     private int age;

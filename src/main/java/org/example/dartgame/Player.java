@@ -1,4 +1,11 @@
 package org.example.dartgame;
+/**
+ * Dies ist die Klasse von dem Spieler sie erbt von Person
+ *
+ * @author MüllerR
+ * @author NussL
+ * @version 1.0
+ */
 public class Player  extends Person {
     String username;
     int winCounter;
@@ -10,22 +17,36 @@ public class Player  extends Person {
         this.winCounter = 0;
         this.credit = 50;
     }
-
+    /**
+     * Dies ist die Methode das der Spieler Geld verdienen kann
+     *
+     * @author MüllerR
+     * @author NussL
+     * @version 1.0
+     */
     public void earnCredit(int gewinn){
         this.credit += gewinn;
     }
 
-    public int calculateWin(int pot, int anzahlWürfe,int points){
+    /**
+     * Dies ist die Methode welche den Gewinn berechnet
+     *
+     * @author MüllerR
+     * @author NussL
+     * @version 1.0
+     */
+    public int calculateWin(int pot, int anzahlWuerfe,int points){
         if (points == 501){
-            int win = (pot * 3) / (anzahlWürfe - 8);
+            int win = (pot * 3) / (anzahlWuerfe - 8);
             return win;
         }
         else  {
-            int win = (pot*3)/(anzahlWürfe-5);
+            int win = (pot*3)/(anzahlWuerfe-5);
             return win;
         }
     }
 
+    //Getter und Setter
     public String getUsername() {
         return username;
     }

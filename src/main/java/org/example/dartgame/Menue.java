@@ -18,10 +18,23 @@ import javafx.stage.StageStyle;
 import java.util.Objects;
 
 import static javafx.application.Application.launch;
-
+/**
+ * Dies ist die Klasse Menue welche zuständig ist um alles zu starten. Vom Menü aus kann man weiter zu den anderen Klassen
+ *
+ * @author MüllerR
+ * @author NussL
+ * @version 1.0
+ */
 public class Menue extends Application {
 
     private Player spieler = new Player("Gast", 100,"Guestuser");
+    /**
+     * Dies ist die start Methode zuständig für das automatische starten
+     *
+     * @author MüllerR
+     * @author NussL
+     * @version 1.0
+     */
     @Override
     public void start(Stage primaryStage) throws Exception{
         //Grundriss erstellen
@@ -90,7 +103,13 @@ public class Menue extends Application {
         primaryStage.show();
 
     }
-
+    /**
+     * Dies ist die Main Methode mit launch so das die Start Methode für das GUI ausgeführt wird
+     *
+     * @author MüllerR
+     * @author NussL
+     * @version 1.0
+     */
     public static void main(String[] args) {
         launch();
     }

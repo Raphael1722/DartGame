@@ -14,14 +14,26 @@ import org.controlsfx.control.spreadsheet.Grid;
 import java.util.function.ToIntBiFunction;
 
 
-
+/**
+ * Dies ist die Klasse Player Screen welche den neuen Spieler erstellt
+ *
+ * @author MüllerR
+ * @author NussL
+ * @version 1.0
+ */
 public class PlayerScreen{
 
     private String newName;
     private int newAge;
     private String newUsername;
     private Player spielerOwn;
-
+    /**
+     * Dies ist der Konstruktor der automatisch das GUI erstellt wenn aufgerufen
+     *
+     * @author MüllerR
+     * @author NussL
+     * @version 1.0
+     */
     public PlayerScreen(Stage stage){
 
         //Grundriss erstellen
@@ -134,6 +146,7 @@ public class PlayerScreen{
         stage.setTitle("Player Menu");
         stage.show();
     }
+
 
     //Getter und Setter
     public String getNewName() {

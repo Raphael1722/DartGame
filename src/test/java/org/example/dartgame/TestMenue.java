@@ -3,10 +3,16 @@ package org.example.dartgame;
 
 import org.junit.jupiter.api.*;
 
+/**
+ * Dies ist die Test Klasse zum testen mit JUnit
+ *
+ * @author MüllerR
+ * @version 1.0
+ */
 public class TestMenue {
     @BeforeAll
     static void beforeAll(){
-        Player spieler = new Player("Frank", 20, "macht kramk");
+        Player spieler = new Player("Frank", 20, "macht krank");
     }
     @BeforeEach
     void beforeEach(){
