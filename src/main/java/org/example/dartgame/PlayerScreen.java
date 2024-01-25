@@ -135,8 +135,6 @@ public class PlayerScreen{
             new AllyPally(stage,getSpielerOwn());
         });
 
-
-
         //Stylesheet einbinden
         first.getStylesheets().add(getClass().getResource("StylesheetPlayerScreen.css").toExternalForm());
 

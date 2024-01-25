@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="36fd3e54-c913-48ea-bdb7-4385ce34d957" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/AllyPally.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/AllyPally.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Dart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Dart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/dartgame/TestMenue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/dartgame/TestMenue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Menue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Menue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/PlayerScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/PlayerScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/dartgame/StyleDart.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/dartgame/StyleDart.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +67,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.runner",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>

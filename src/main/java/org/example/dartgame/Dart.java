@@ -41,9 +41,9 @@ public class Dart{
     //final Variablen
     private static final int PREFERED_WIDTH = 1300;
     private static final int PREFERED_HIGHT = 800;
-
+    //static Variblen
     private static int step = 15;
-    //Variablen
+    //Variablen GUI
     private BorderPane root;
     private BorderPane rootWinn;
     private FlowPane flow;
@@ -52,21 +52,22 @@ public class Dart{
     private TextField textField;
     private TextField labelPoint;
     private Circle dart;
-    private boolean status;
-    private int counter;
-    private int point = 501;
-    private int dartCounter = 0;
     private Stage primarySage;
     private Scene winnScreen;
     private FlowPane flowLeft;
     private Label name;
     private Label winCounter;
-    private Player player;
     private Button erneutSpielen;
     private GridPane gridWin;
     private Label creditAmount;
     private TextField dartcounterTxt;
     private Label luecke;
+    private Player player;
+    //Instanzvariabeln
+    private boolean status;
+    private int counter;
+    private int point = 501;
+    private int dartCounter = 0;
     private int amount;
     private int wurf;
     private int anfangPunkte;
@@ -119,7 +120,7 @@ public class Dart{
         gridWin.add(erneutSpielen, 0,1);
         //Label Anzahl Darts
         anzahlDart = new TextField();
-        anzahlDart.appendText("Du hast: " + Integer.toString(dartCounter) + " würfe gebraucht");
+        anzahlDart.appendText("Du hast: " + Integer.toString(getDartCounter()) + " würfe gebraucht");
         anzahlDart.setDisable(true);
         anzahlDart.getStyleClass().add("anzahlDart");
         rootWinn.setBottom(anzahlDart);
@@ -142,7 +143,7 @@ public class Dart{
         rootWinn.setPrefSize(PREFERED_WIDTH,PREFERED_HIGHT);
         //Textfield welches die Punkte welche man noch hat anzeigen soll
         labelPoint = new TextField();
-        labelPoint.appendText("\t" + Integer.toString(point));
+        labelPoint.appendText("\t" + Integer.toString(getPoint()));
         labelPoint.setDisable(true);
         //Style für Label Point
         labelPoint.getStyleClass().add("Points");
@@ -172,8 +173,8 @@ public class Dart{
         flow.getChildren().add(dartcounterTxt);
 
         //Variablen Wert gegeben
-        status = true;
-        counter = 0;
+        setStatus(true);
+        setCounter(0);
 
 
         //Neue Scene erstellt
@@ -201,17 +202,17 @@ public class Dart{
          */
         scene.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
             KeyCode code = event.getCode();
-            if (code == KeyCode.UP && status == true) {
+            if (code == KeyCode.UP && isStatus() == true) {
                 textField.clear();
                 textField.setPromptText("Hier Punkte eingeben");
                 dartLinksRechts();
-            } else if (code == KeyCode.UP && counter == 1) {
+            } else if (code == KeyCode.UP && getCounter() == 1) {
                 dartObenUnten();
                 textField.setDisable(false);
-            } else if(code == KeyCode.ENTER && counter == 2){
-                dartCounter += 1;
+            } else if(code == KeyCode.ENTER && getCounter() == 2){
+                setDartCounter(getDartCounter()+1);
                 anzahlDart.clear();
-                anzahlDart.appendText("Du hast: " + Integer.toString(dartCounter) + " Würfe gebraucht");
+                anzahlDart.appendText("Du hast: " + Integer.toString(getDartCounter()) + " Würfe gebraucht");
                 takePoint();
             }
         });
@@ -219,8 +220,8 @@ public class Dart{
         scene.addEventHandler(KeyEvent.KEY_RELEASED, event -> {
             KeyCode code1 = event.getCode();
             if (code1 == KeyCode.UP) {
-                status = false;
-                counter++;
+                setStatus(false);
+                setCounter(getCounter()+1);
             }
         });
         erneutSpielen.setOnAction(actionEvent -> {
@@ -273,12 +274,12 @@ public class Dart{
      * @version 1.0
      */
     public void takePoint(){
-        status = true;
-        counter = 0;
+        setStatus(true);
+        setCounter(0);
         try{
             int geworfenePunkte = Integer.parseInt(textField.getText());
             dartcounterTxt.clear();
-            dartcounterTxt.appendText("Du hast "+dartCounter+" Wurf/Würfe im Moment");
+            dartcounterTxt.appendText("Du hast "+getDartCounter()+" Wurf/Würfe im Moment");
             if(geworfenePunkte < 0 || geworfenePunkte > 60) {
                 textField.clear();
                 textField.appendText("Nicht möglich");
@@ -287,29 +288,29 @@ public class Dart{
                 textField.setDisable(true);
             }
             else {
-                setPoint(point - geworfenePunkte);
+                setPoint(getPoint() - geworfenePunkte);
                 textField.clear();
                 textField.setPromptText("Hier Punkte eingeben");
-                if (point == 0) {
+                if (getPoint() == 0) {
                     //Winscreen anzeigen lassem
                     primarySage.setTitle("Gewonnen");
                     primarySage.setScene(winnScreen);
                     //Spieler bekommte durch den Win Wincounter mehr und bekommt Credits
                     player.setWincounter(+1);
                     //Wenn die Wette stimmt, bekommt der Spieler das doppelte vom Einsatz zurück
-                    if(dartCounter < wurf){
-                        player.earnCredit(player.calculateWin(amount,wurf,anfangPunkte));
+                    if(getDartCounter() < getWurf()){
+                        player.earnCredit(player.calculateWin(getAmount(),getWurf(),getAnfangPunkte()));
                     }
-                } else if (point < 0) {
-                    setPoint(point + geworfenePunkte);
+                } else if (getPoint() < 0) {
+                    setPoint(getPoint() + geworfenePunkte);
                     labelPoint.clear();
-                    labelPoint.appendText("\t" + Integer.toString(point));
+                    labelPoint.appendText("\t" + Integer.toString(getPoint()));
                     dart.setCenterY(700);
                     dart.setCenterX(100);
                     textField.setDisable(true);
                 } else {
                     labelPoint.clear();
-                    labelPoint.appendText("\t" + Integer.toString(point));
+                    labelPoint.appendText("\t" + Integer.toString(getPoint()));
                     dart.setCenterY(700);
                     dart.setCenterX(100);
                     textField.setDisable(true);
@@ -331,5 +332,69 @@ public class Dart{
 
     public void setPoint(int point) {
         this.point = point;
+    }
+
+    public int getAnfangPunkte() {
+        return anfangPunkte;
+    }
+
+    public void setAnfangPunkte(int anfangPunkte) {
+        this.anfangPunkte = anfangPunkte;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public int getWurf() {
+        return wurf;
+    }
+
+    public int getCounter() {
+        return counter;
+    }
+
+    public void setCounter(int counter) {
+        this.counter = counter;
+    }
+
+    public void setWurf(int wurf) {
+        this.wurf = wurf;
+    }
+
+    public int getDartCounter() {
+        return dartCounter;
+    }
+
+    public void setDartCounter(int dartCounter) {
+        this.dartCounter = dartCounter;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public static int getStep() {
+        return step;
+    }
+
+    public static void setStep(int step) {
+        Dart.step = step;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
     }
 }
