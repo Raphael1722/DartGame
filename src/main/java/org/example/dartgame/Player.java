@@ -37,11 +37,11 @@ public class Player  extends Person {
      */
     public int calculateWin(int pot, int anzahlWuerfe,int points){
         if (points == 501){
-            int win = (pot * 3) / (anzahlWuerfe - 8);
+            int win = (pot * 4) / (anzahlWuerfe - 8);
             return win;
         }
         else  {
-            int win = (pot*3)/(anzahlWuerfe-5);
+            int win = (pot*4)/(anzahlWuerfe-5);
             return win;
         }
     }

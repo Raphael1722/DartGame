@@ -65,6 +65,8 @@ public class Dart{
     private Button erneutSpielen;
     private GridPane gridWin;
     private Label creditAmount;
+    private TextField dartcounterTxt;
+    private Label luecke;
     private int amount;
     private int wurf;
     private int anfangPunkte;
@@ -85,8 +87,6 @@ public class Dart{
         player = spieler;
         this.amount = amount;
         this.wurf = wurf;
-
-
 
         //Border und Flow Pane erstellen
         root = new BorderPane();
@@ -123,6 +123,16 @@ public class Dart{
         anzahlDart.setDisable(true);
         anzahlDart.getStyleClass().add("anzahlDart");
         rootWinn.setBottom(anzahlDart);
+        //Textfield für Anzahl Würfe
+        dartcounterTxt = new TextField();
+        dartcounterTxt.setPromptText("Hier siehst du die Anzahl Würfe im Moment");
+        dartcounterTxt.setPrefSize(260,100);
+        dartcounterTxt.setDisable(true);
+        //Textfield für Anzahl Würfe in CSS einbinden
+        dartcounterTxt.getStyleClass().add("counterTxt");
+        //Label für Lücke
+        luecke = new Label();
+        luecke.setPrefSize(260,545);
         //Text Field erstellen
         textField = new TextField();
         textField.setPromptText("Hier Punkte eingeben");
@@ -158,6 +168,8 @@ public class Dart{
         //Text Field und Point Label in Flow Pain gemacht
         flow.getChildren().add(labelPoint);
         flow.getChildren().add(textField);
+        flow.getChildren().add(luecke);
+        flow.getChildren().add(dartcounterTxt);
 
         //Variablen Wert gegeben
         status = true;
@@ -265,6 +277,8 @@ public class Dart{
         counter = 0;
         try{
             int geworfenePunkte = Integer.parseInt(textField.getText());
+            dartcounterTxt.clear();
+            dartcounterTxt.appendText("Du hast "+dartCounter+" Wurf/Würfe im Moment");
             if(geworfenePunkte < 0 || geworfenePunkte > 60) {
                 textField.clear();
                 textField.appendText("Nicht möglich");
