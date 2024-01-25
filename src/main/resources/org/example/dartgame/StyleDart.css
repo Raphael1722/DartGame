@@ -61,3 +61,6 @@
     -fx-font-size: 20;
     -fx-background-color: radial-gradient(center 50% 50%, radius 60%, reflect, royalblue, black );
 }
+.counterTxt{
+    -fx-font-size: 20;
+}

@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36fd3e54-c913-48ea-bdb7-4385ce34d957" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/dartgame/TestMenue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Dart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Dart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/createPlayer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/dartgame/StyleDart.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/dartgame/StyleDart.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,10 +54,11 @@
     &quot;Application.Dart.executor&quot;: &quot;Run&quot;,
     &quot;Application.Menue.executor&quot;: &quot;Run&quot;,
     &quot;Application.createPlayer.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestMenue.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Merging master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/HTML_Projekte/Dartboard&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
@@ -127,8 +135,7 @@
       <workItem from="1705644159691" duration="7414000" />
       <workItem from="1706078535372" duration="9977000" />
       <workItem from="1706092501423" duration="8056000" />
-      <workItem from="1706106049987" duration="3269000" />
-      <workItem from="1706165355119" duration="770000" />
+      <workItem from="1706106049987" duration="1300000" />
     </task>
     <servers />
   </component>
