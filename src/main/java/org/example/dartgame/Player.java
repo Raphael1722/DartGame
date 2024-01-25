@@ -11,6 +11,7 @@ public class Player  extends Person {
     int winCounter;
     int credit;
 
+    //Konstruktor
     public Player(String name, int age, String username){
         super(name,age);
         this.username = username;
@@ -24,6 +25,7 @@ public class Player  extends Person {
      * @author NussL
      * @version 1.0
      */
+    //Spieler bekommt Credits
     public void earnCredit(int gewinn){
         this.credit += gewinn;
     }
@@ -35,6 +37,7 @@ public class Player  extends Person {
      * @author NussL
      * @version 1.0
      */
+    //Der Gewinn wird berechnet, mit den Anzahl Würfen die man gebraucht hat
     public int calculateWin(int pot, int anzahlWuerfe,int points){
         if (points == 501){
             int win = (pot * 4) / (anzahlWuerfe - 8);

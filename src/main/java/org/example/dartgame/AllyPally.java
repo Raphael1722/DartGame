@@ -20,8 +20,7 @@ import static javafx.application.Application.launch;
  * @version 1.0
  */
 public class AllyPally {
-    private int varModus;
-    private int schwierigkeit;
+    //Varbiablen für GUI
     private BorderPane screen;
     private GridPane grid;
     private GridPane insane;
@@ -29,6 +28,10 @@ public class AllyPally {
     private ChoiceBox mode;
     private ChoiceBox difficulty;
     private Label credit;
+
+    //Instanzvariablen
+    private int varModus;
+    private int schwierigkeit;
     private int amount;
     private int wurf;
 

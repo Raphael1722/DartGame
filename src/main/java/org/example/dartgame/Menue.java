@@ -114,6 +114,7 @@ public class Menue extends Application {
         launch();
     }
 
+    //Getter und Setter
     public Player getSpieler() {
         return spieler;
     }
