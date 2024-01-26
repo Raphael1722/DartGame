@@ -296,10 +296,10 @@ public class Dart{
                     primarySage.setTitle("Gewonnen");
                     primarySage.setScene(winnScreen);
                     //Spieler bekommte durch den Win Wincounter mehr und bekommt Credits
-                    player.setWincounter(+1);
+                    player.setWincounter(player.getWincounter()+1);
                     //Wenn die Wette stimmt, bekommt der Spieler das doppelte vom Einsatz zurück
-                    if(getDartCounter() < getWurf()){
-                        player.earnCredit(player.calculateWin(getAmount(),getWurf(),getAnfangPunkte()));
+                    if(getDartCounter() <= getWurf()){
+                        player.earnCredit(player.calculateWin(getAmount(),getDartCounter(),getAnfangPunkte()));
                     }
                 } else if (getPoint() < 0) {
                     setPoint(getPoint() + geworfenePunkte);

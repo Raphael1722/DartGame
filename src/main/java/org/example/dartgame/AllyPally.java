@@ -100,10 +100,10 @@ public class AllyPally {
         goOn.setOnAction(event -> {
             if (mode.getValue() == "501") {
                 setVarModus(501);
-                wurf = 12;
+                setWurf(12);
             } else {
                 setVarModus(301);
-                wurf = 9;
+                setWurf(9);
             }
             if (difficulty.getValue() == "Einfach") {
                 setSchwierigkeit(10);
@@ -115,16 +115,16 @@ public class AllyPally {
                 setSchwierigkeit(20);
             }
             try{
-            amount = Integer.parseInt(JOptionPane.showInputDialog(null, "Du hast "+spieler.getCredit()+" Credits. Geben sie ihren Einsatz ein, um die Punktzah in "+wurf+ " Würfen zu knaken!"));
+            setAmount(Integer.parseInt(JOptionPane.showInputDialog(null, "Du hast "+spieler.getCredit()+" Credits. Geben sie ihren Einsatz ein, um die Punktzah in "+wurf+ " Würfen zu knaken!")));
             }catch (NumberFormatException e){
-                amount = Integer.parseInt(JOptionPane.showInputDialog(null, "Du hast nicht Credits eingegeben, versuch es nochmal!"));
+                setAmount(Integer.parseInt(JOptionPane.showInputDialog(null, "Du hast nicht Credits eingegeben, versuch es nochmal!")));
             }
-            if(amount > spieler.getCredit()){
-                amount = Integer.parseInt(JOptionPane.showInputDialog(null, "Du hast zu wenig Credits!"));
+            if(getAmount() > spieler.getCredit()){
+                setAmount(Integer.parseInt(JOptionPane.showInputDialog(null, "Du hast zu wenig Credits!")));
             }
-            spieler.setCredit(spieler.getCredit() - amount);
+            spieler.setCredit(spieler.getCredit() - getAmount());
             try {
-                new Dart(stage,getVarModus(),getSchwierigkeit(), spieler, amount, wurf);
+                new Dart(stage,getVarModus(),getSchwierigkeit(), spieler, getAmount(), getWurf());
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -155,5 +155,21 @@ public class AllyPally {
 
     public void setSchwierigkeit(int schwierigkeit) {
         this.schwierigkeit = schwierigkeit;
+    }
+
+    public int getWurf() {
+        return wurf;
+    }
+
+    public void setWurf(int wurf) {
+        this.wurf = wurf;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 }
