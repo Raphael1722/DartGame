@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36fd3e54-c913-48ea-bdb7-4385ce34d957" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/AllyPally.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/AllyPally.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Dart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Dart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Menue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Menue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/PlayerScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dartgame/PlayerScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dartgame/Start.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +132,7 @@
       <workItem from="1706078535372" duration="9977000" />
       <workItem from="1706092501423" duration="8056000" />
       <workItem from="1706106049987" duration="1300000" />
-      <workItem from="1706258538240" duration="1072000" />
+      <workItem from="1706258538240" duration="1981000" />
     </task>
     <servers />
   </component>

@@ -131,6 +131,7 @@ public class PlayerScreen{
                     spielerOwn = new Player(getNewName(), getNewAge(), getNewUsername());
 
         });
+        //Zum AllyPally gehen per Knopf
         back.setOnAction(event ->{
             new AllyPally(stage,getSpielerOwn());
         });

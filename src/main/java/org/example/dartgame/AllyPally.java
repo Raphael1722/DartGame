@@ -55,6 +55,8 @@ public class AllyPally {
         Label modeL = new Label("Modus");
         Label difficultyL = new Label("Schwierigkeit");
         Label credit = new Label("Credits: "+spieler.getCredit());
+
+        //Nodes in CSS einbinden
         credit.getStyleClass().add("credit");
         allyPally.getStyleClass().add("allyPally");
         modeL.getStyleClass().add("next");
@@ -62,14 +64,15 @@ public class AllyPally {
         mode.getStyleClass().add("CheckBox");
         difficulty.getStyleClass().add("CheckBox");
 
-
-
+        //Weiter button erstellen
         Button goOn = new Button("Weiter");
 
+        //Elemente im BorderPane hinzufügen
         screen.setTop(allyPally);
         screen.setCenter(grid);
         screen.setRight(insane);
 
+        //Label und Choicebox hinzufüegn zum grid
         grid.add(modeL,0,0);
         grid.add(mode,1,0);
         grid.add(difficultyL,0,1);
@@ -77,14 +80,15 @@ public class AllyPally {
         grid.add(credit,0,2);
 
 
-
+        //Grid Grösse und Anzahl definieren
         insane.getRowConstraints().add(new RowConstraints(200));
         insane.getRowConstraints().add(new RowConstraints(220));
         insane.getRowConstraints().add(new RowConstraints(260));
-
+        //+
         grid.getRowConstraints().add(new RowConstraints(300));
         grid.getRowConstraints().add(new RowConstraints(300));
 
+        //Node zum grid adden
         insane.add(goOn, 0, 1);
 
         //Grösse Weiter-button setzten
@@ -130,8 +134,7 @@ public class AllyPally {
             }
         });
 
-
-        //Stylesheet eibinden
+        //Stylesheet einbinden
         main.getStylesheets().add(getClass().getResource("StylesheetAllyPally.css").toExternalForm());
         //Stage bennenen und zeigen
         stage.setTitle("Ally Pally");

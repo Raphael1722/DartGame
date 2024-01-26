@@ -27,6 +27,7 @@ import static javafx.application.Application.launch;
  */
 public class Menue extends Application {
 
+    //Gastspieler erstellen
     private Player spieler = new Player("Gast", 100,"Guestuser");
     /**
      * Dies ist die start Methode zuständig für das automatische starten
